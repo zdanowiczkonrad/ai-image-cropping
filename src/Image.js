@@ -69,7 +69,8 @@ export class Image extends Component {
             context.fillStyle = 'rgba(0,0,255,50)';
             context.fillRect(sobelCorners[i], sobelCorners[i + 1], 1, 1);
           }
-          document.body.appendChild(canvas);
+          image.parentElement.appendChild(canvas);
+          
         console.log('sobel corners')
         console.log(sobelCorners);
         // starting averages from center
