@@ -1,0 +1,59 @@
+
+
+.image-container {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 10px purple;
+    margin: 4px;
+  }
+  
+
+.image-container {
+    background: #eee;
+    position: relative;
+}
+
+.image-container img {
+    opacity: 0;
+    transition: opacity 0.4s;
+
+}
+
+.image-container.loaded {
+    background: white;
+}
+.image-container.loaded img {
+    opacity: 1;
+}
+
+.image-container .clipping-box {
+    position: absolute;
+    box-shadow: 0 0 0 5px red;
+}
+
+.image-container .gravity-box {
+    position: absolute;
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border-radius: 40px;
+}
+.image-container .sobel-box {
+    position: absolute;
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background:magenta;
+    border-radius: 40px;
+}
+
+.image-container .face-box {
+    position: absolute;
+    box-shadow: 0 0 0 5px green;
+}

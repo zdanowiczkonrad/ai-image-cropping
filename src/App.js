@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Image } from './Image';
 
+
+const IMAGES = [
+  'dress.jpg',
+  'parfume-horizontal.png',
+  'parfume-vertical.png',
+  'shoes.jpg',
+  'old-man.png'
+];
+
+const PLACEHOLDER_DIMENSIONS = {
+  width: 400,
+  height: 400
+}
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {IMAGES.map(url => <div className="image-container">
+          <Image src={url} dimensions={PLACEHOLDER_DIMENSIONS}/>
+        </div>)}
       </div>
     );
   }
 }
+
+
 
 export default App;
